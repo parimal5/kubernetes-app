@@ -23,6 +23,10 @@ spec:
       initContainers:
         - name: init-mydb
           image: busybox
+          #vprodb.default.svc.cluster.local
+          # vprodb -name of the Service
+          # default - name of the namespace we did not create any so deafult
+          # until nslookup vprodb.default; do echo waiting for vprodb; sleep 2; done - This also should work
           command:
             [
               "sh",
