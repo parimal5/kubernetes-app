@@ -37,9 +37,9 @@ spec:
             volumeID: vol-0825b2c1ec0350961
             fsType: ext4
 
-      initContainer:
-        - name: busyBox
-          image: busyBox:latest
+      initContainers:
+        - name: busybox
+          image: busybox:latest
           args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
           volumeMounts:
             - name: vpro-db-data
