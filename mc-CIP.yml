@@ -1,0 +1,13 @@
+#mc-CIP - mc-ClusterIP
+apiVersion: v1
+kind: Service
+metadata:
+  name: vprocache01
+spec:
+  ports:
+    - port: 11211
+      targetPort: vprodb-port
+      protocol: TCP
+  selector:
+    app: vprodb
+  type: ClusterIP
